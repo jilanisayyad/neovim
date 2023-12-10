@@ -19,12 +19,10 @@ wk.setup({
 local mappings = {
 	e = { ":NvimTreeToggle<cr>", "FileManager" },
 	s = { ":w!<cr>", "Save" },
-	q = { ":bd!<cr>", "Quit" },
 	R = { ":RunCode<cr>", "Run Code" },
 	q = { ":bd!<cr>", "Quit All" },
 	f = { ":Telescope find_files<cr>", "Telescope Find Files" },
 	g = { ":Telescope live_grep<cr>", "Telescope Live Grep" },
-	t = { v = { ":vsplit<cr>", "vsplit" }, h = { ":split<cr>", "split" } },
 	h = { ":Telescope http list<cr>", "Telescope http" },
 	b = { ":Telescope bookmarks<cr>", "Telescope bookmarks" },
 	l = {

@@ -10,6 +10,8 @@ require("mason-null-ls").setup({
 		"prettier",
 		"gofmt",
 		"terraform_fmt",
+		"java",
+		"xmlformat",
 	},
 })
 
@@ -37,6 +39,7 @@ null_ls.setup({
 		null_ls.builtins.formatting.shfmt,
 		null_ls.builtins.diagnostics.hadolint,
 		null_ls.builtins.formatting.terraform_fmt,
+		null_ls.builtins.formatting.xmlformat,
 	},
 	on_attach = function(client, bufnr)
 		if client.supports_method("textDocument/formatting") then

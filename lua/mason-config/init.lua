@@ -11,6 +11,7 @@ require("mason").setup({
 			package_uninstalled = "✗",
 		},
 	},
+	automatic_servers_installation = true,
 })
 
 local nvim_lsp = require("lspconfig")
@@ -129,5 +130,3 @@ require("lspconfig").yamlls.setup({
 require("lspconfig").bashls.setup({
 	capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities()),
 })
-
--- LSP keybindings

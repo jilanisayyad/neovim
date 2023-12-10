@@ -18,6 +18,15 @@ return require("packer").startup(function(use)
 	use({ "neovim/nvim-lspconfig" })
 	use({ "williamboman/mason.nvim" })
 	use({ "williamboman/mason-lspconfig.nvim", config = "require('mason-config')" })
+	use({ "mfussenegger/nvim-jdtls" })
+	use({
+		"nvim-neotest/neotest",
+		requires = { "antoinemadec/FixCursorHold.nvim" },
+		config = "require('neotest-config')",
+	})
+	use({ "rcasia/neotest-java" })
+	use({ "nvim-neotest/neotest-python" })
+	use({ "nvim-neotest/neotest-go" })
 	-- Debuggging DAP
 	use({
 		"jay-babu/mason-nvim-dap.nvim",
