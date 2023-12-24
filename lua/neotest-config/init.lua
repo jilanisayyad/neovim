@@ -97,26 +97,3 @@ vim.diagnostic.config({
 		end,
 	},
 }, neotest_ns)
-
--- Neotest Shortcuts
-require("which-key").register({
-	["<leader>"] = {
-		t = {
-			name = "Run Tests",
-			t = { "<cmd>lua require('neotest').run.run(vim.loop.cwd())<cr>", "Run All Tests" },
-			n = { "<cmd>lua require('neotest').run.run()<cr>", "Run Nearest" },
-			s = { "<cmd>lua require('neotest').run.stop()<cr>", "Stop" },
-			S = { "<cmd>lua require('neotest').summary.toggle()<cr>", "Toggle Summary" },
-			oo = { "<cmd>lua require('neotest').output.open({ enter = true, auto_close = true })<cr>", "Open Output" },
-			ot = { "<cmd> lua require('neotest').output_panel.toggle()<cr>", "Toggle Output Panel" },
-			a = { "<cmd>lua require('neotest').run.attach()<cr>", "Attach" },
-			l = { "<cmd>lua require('neotest').run.run(vim.fn.expand('%'))<cr>", "Run Current Test File" },
-			d = { "<cmd>lua require('neotest').run.run({strategy='dap'})<cr>", "Debug" },
-			fp = { "<cmd><cmd>lua require('neotest').jump.prev({ status ='failed' })<cr>", "Prev Failed" },
-			fn = { "<cmd><cmd>lua require('neotest').jump.next({ status ='passed' })<cr>", "Next Passed" },
-			pp = { "<cmd><cmd>lua require('neotest').jump.prev({ status ='passed' })<cr>", "Prev Passed" },
-			pn = { "<cmd><cmd>lua require('neotest').jump.next({ status ='passed' })<cr>", "Next Passed" },
-			w = { "<cmd>lua require('neotest').watch.toggle(vim.fn.expand('%'))<cr>", "Watch Test" },
-		},
-	},
-})

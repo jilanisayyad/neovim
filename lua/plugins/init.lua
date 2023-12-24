@@ -164,4 +164,15 @@ return require("packer").startup(function(use)
 	use({ "yamatsum/nvim-cursorline", config = "require('cursorword-config')" })
 	--search and replace
 	use({ "cshuaimin/ssr.nvim", module = "ssr", config = "require('ssr-config')" })
+	-- project management
+	use({
+		"coffebar/neovim-project",
+		config = "require('project-config')",
+		requires = {
+			{ "Shatur/neovim-session-manager" },
+		},
+	})
+	-- image wsl
+	use({ "HakonHarnes/img-clip.nvim", config = "require('img-clip-config')" })
+	use({ "akinsho/toggleterm.nvim", config = "require('toggleterm-config')" })
 end)
