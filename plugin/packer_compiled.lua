@@ -299,7 +299,7 @@ _G.packer_plugins = {
     config = { "require('cokeline-config')" },
     loaded = true,
     path = "/home/jsayyad/.local/share/nvim/site/pack/packer/start/nvim-cokeline",
-    url = "https://github.com/noib3/nvim-cokeline"
+    url = "https://github.com/willothy/nvim-cokeline"
   },
   ["nvim-colorizer.lua"] = {
     config = { "require('colorizer-config')" },
@@ -367,7 +367,7 @@ _G.packer_plugins = {
     url = "https://github.com/kyazdani42/nvim-tree.lua"
   },
   ["nvim-treesitter"] = {
-    after = { "nvim-ts-autotag", "nvim-ts-rainbow" },
+    after = { "nvim-ts-rainbow", "nvim-ts-autotag" },
     config = { "require('treesitter-config')" },
     loaded = false,
     needs_bufread = false,
@@ -427,6 +427,11 @@ _G.packer_plugins = {
     path = "/home/jsayyad/.local/share/nvim/site/pack/packer/start/promise-async",
     url = "https://github.com/kevinhwang91/promise-async"
   },
+  ["resession.nvim"] = {
+    loaded = true,
+    path = "/home/jsayyad/.local/share/nvim/site/pack/packer/start/resession.nvim",
+    url = "https://github.com/stevearc/resession.nvim"
+  },
   ["ssr.nvim"] = {
     config = { "require('ssr-config')" },
     loaded = false,
@@ -439,11 +444,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/jsayyad/.local/share/nvim/site/pack/packer/start/telescope-bookmarks.nvim",
     url = "https://github.com/dhruvmanila/telescope-bookmarks.nvim"
-  },
-  ["telescope-dapzzzz"] = {
-    loaded = true,
-    path = "/home/jsayyad/.local/share/nvim/site/pack/packer/start/telescope-dapzzzz",
-    url = "https://github.com/HUAHUAI23/telescope-dapzzzz"
   },
   ["telescope-http.nvim"] = {
     loaded = true,
@@ -569,18 +569,26 @@ end
 time([[Config for code_runner.nvim]], true)
 require('code-runner-config')
 time([[Config for code_runner.nvim]], false)
--- Config for: lspsaga.nvim
-time([[Config for lspsaga.nvim]], true)
-require('lspsaga-config')
-time([[Config for lspsaga.nvim]], false)
--- Config for: nvim-dap-virtual-text
-time([[Config for nvim-dap-virtual-text]], true)
-require('dap-virtual-text-config')
-time([[Config for nvim-dap-virtual-text]], false)
--- Config for: LuaSnip
-time([[Config for LuaSnip]], true)
-require('luasnip-config')
-time([[Config for LuaSnip]], false)
+-- Config for: neodev.nvim
+time([[Config for neodev.nvim]], true)
+require('neodev-config')
+time([[Config for neodev.nvim]], false)
+-- Config for: img-clip.nvim
+time([[Config for img-clip.nvim]], true)
+require('img-clip-config')
+time([[Config for img-clip.nvim]], false)
+-- Config for: mason-lspconfig.nvim
+time([[Config for mason-lspconfig.nvim]], true)
+require('mason-config')
+time([[Config for mason-lspconfig.nvim]], false)
+-- Config for: nvim-cokeline
+time([[Config for nvim-cokeline]], true)
+require('cokeline-config')
+time([[Config for nvim-cokeline]], false)
+-- Config for: nvim-tree.lua
+time([[Config for nvim-tree.lua]], true)
+require('nvimtree-config')
+time([[Config for nvim-tree.lua]], false)
 -- Config for: copilot.vim
 time([[Config for copilot.vim]], true)
 require('copilot-config')
@@ -589,82 +597,46 @@ time([[Config for copilot.vim]], false)
 time([[Config for lualine.nvim]], true)
 require('lualine-config')
 time([[Config for lualine.nvim]], false)
--- Config for: toggleterm.nvim
-time([[Config for toggleterm.nvim]], true)
-require('toggleterm-config')
-time([[Config for toggleterm.nvim]], false)
--- Config for: fidget.nvim
-time([[Config for fidget.nvim]], true)
-require('fidget-config')
-time([[Config for fidget.nvim]], false)
--- Config for: nvim-cokeline
-time([[Config for nvim-cokeline]], true)
-require('cokeline-config')
-time([[Config for nvim-cokeline]], false)
--- Config for: mason-nvim-dap.nvim
-time([[Config for mason-nvim-dap.nvim]], true)
-require('mason-dap-config')
-time([[Config for mason-nvim-dap.nvim]], false)
--- Config for: nvim-dap-go
-time([[Config for nvim-dap-go]], true)
-require('dap-go-config')
-time([[Config for nvim-dap-go]], false)
--- Config for: mason-lspconfig.nvim
-time([[Config for mason-lspconfig.nvim]], true)
-require('mason-config')
-time([[Config for mason-lspconfig.nvim]], false)
--- Config for: nvim-tree.lua
-time([[Config for nvim-tree.lua]], true)
-require('nvimtree-config')
-time([[Config for nvim-tree.lua]], false)
--- Config for: gitsigns.nvim
-time([[Config for gitsigns.nvim]], true)
-try_loadstring("\27LJ\2\nQ\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\23current_line_blame\2\nsetup\rgitsigns\frequire\0", "config", "gitsigns.nvim")
-time([[Config for gitsigns.nvim]], false)
--- Config for: mason-null-ls.nvim
-time([[Config for mason-null-ls.nvim]], true)
-require('mason-null-config')
-time([[Config for mason-null-ls.nvim]], false)
 -- Config for: neotest
 time([[Config for neotest]], true)
 require('neotest-config')
 time([[Config for neotest]], false)
--- Config for: nvim-cmp
-time([[Config for nvim-cmp]], true)
-require('cmp-config')
-time([[Config for nvim-cmp]], false)
--- Config for: img-clip.nvim
-time([[Config for img-clip.nvim]], true)
-require('img-clip-config')
-time([[Config for img-clip.nvim]], false)
+-- Config for: fidget.nvim
+time([[Config for fidget.nvim]], true)
+require('fidget-config')
+time([[Config for fidget.nvim]], false)
+-- Config for: nvim-cursorline
+time([[Config for nvim-cursorline]], true)
+require('cursorword-config')
+time([[Config for nvim-cursorline]], false)
+-- Config for: lspsaga.nvim
+time([[Config for lspsaga.nvim]], true)
+require('lspsaga-config')
+time([[Config for lspsaga.nvim]], false)
+-- Config for: mason-null-ls.nvim
+time([[Config for mason-null-ls.nvim]], true)
+require('mason-null-config')
+time([[Config for mason-null-ls.nvim]], false)
 -- Config for: nvim-dap
 time([[Config for nvim-dap]], true)
 require('dap-config')
 time([[Config for nvim-dap]], false)
--- Config for: ultisnips
-time([[Config for ultisnips]], true)
-require("ultisnips-config")
-time([[Config for ultisnips]], false)
--- Config for: impatient.nvim
-time([[Config for impatient.nvim]], true)
-require('impatient-config')
-time([[Config for impatient.nvim]], false)
--- Config for: onedark.nvim
-time([[Config for onedark.nvim]], true)
-require('theme-config')
-time([[Config for onedark.nvim]], false)
--- Config for: nvim-web-devicons
-time([[Config for nvim-web-devicons]], true)
-require('devicons-config')
-time([[Config for nvim-web-devicons]], false)
--- Config for: neodev.nvim
-time([[Config for neodev.nvim]], true)
-require('neodev-config')
-time([[Config for neodev.nvim]], false)
--- Config for: nvim-ufo
-time([[Config for nvim-ufo]], true)
-require('ufo-config')
-time([[Config for nvim-ufo]], false)
+-- Config for: toggleterm.nvim
+time([[Config for toggleterm.nvim]], true)
+require('toggleterm-config')
+time([[Config for toggleterm.nvim]], false)
+-- Config for: gitsigns.nvim
+time([[Config for gitsigns.nvim]], true)
+try_loadstring("\27LJ\2\nQ\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\23current_line_blame\2\nsetup\rgitsigns\frequire\0", "config", "gitsigns.nvim")
+time([[Config for gitsigns.nvim]], false)
+-- Config for: nvim-dap-go
+time([[Config for nvim-dap-go]], true)
+require('dap-go-config')
+time([[Config for nvim-dap-go]], false)
+-- Config for: mason-nvim-dap.nvim
+time([[Config for mason-nvim-dap.nvim]], true)
+require('mason-dap-config')
+time([[Config for mason-nvim-dap.nvim]], false)
 -- Config for: winbar.nvim
 time([[Config for winbar.nvim]], true)
 require('winbar-config')
@@ -673,18 +645,46 @@ time([[Config for winbar.nvim]], false)
 time([[Config for nvim-dap-python]], true)
 require('dap-python-config')
 time([[Config for nvim-dap-python]], false)
--- Config for: neovim-project
-time([[Config for neovim-project]], true)
-require('project-config')
-time([[Config for neovim-project]], false)
--- Config for: nvim-cursorline
-time([[Config for nvim-cursorline]], true)
-require('cursorword-config')
-time([[Config for nvim-cursorline]], false)
+-- Config for: nvim-cmp
+time([[Config for nvim-cmp]], true)
+require('cmp-config')
+time([[Config for nvim-cmp]], false)
+-- Config for: impatient.nvim
+time([[Config for impatient.nvim]], true)
+require('impatient-config')
+time([[Config for impatient.nvim]], false)
 -- Config for: nvim-dap-ui
 time([[Config for nvim-dap-ui]], true)
 require('dap-config')
 time([[Config for nvim-dap-ui]], false)
+-- Config for: ultisnips
+time([[Config for ultisnips]], true)
+require("ultisnips-config")
+time([[Config for ultisnips]], false)
+-- Config for: onedark.nvim
+time([[Config for onedark.nvim]], true)
+require('theme-config')
+time([[Config for onedark.nvim]], false)
+-- Config for: nvim-dap-virtual-text
+time([[Config for nvim-dap-virtual-text]], true)
+require('dap-virtual-text-config')
+time([[Config for nvim-dap-virtual-text]], false)
+-- Config for: nvim-web-devicons
+time([[Config for nvim-web-devicons]], true)
+require('devicons-config')
+time([[Config for nvim-web-devicons]], false)
+-- Config for: nvim-ufo
+time([[Config for nvim-ufo]], true)
+require('ufo-config')
+time([[Config for nvim-ufo]], false)
+-- Config for: neovim-project
+time([[Config for neovim-project]], true)
+require('project-config')
+time([[Config for neovim-project]], false)
+-- Config for: LuaSnip
+time([[Config for LuaSnip]], true)
+require('luasnip-config')
+time([[Config for LuaSnip]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)
 vim.cmd [[ packadd nvim-autopairs ]]
@@ -711,8 +711,8 @@ vim.cmd [[au!]]
 time([[Defining lazy-load event autocommands]], true)
 vim.cmd [[au InsertEnter * ++once lua require("packer.load")({'nvim-ts-autotag'}, { event = "InsertEnter *" }, _G.packer_plugins)]]
 vim.cmd [[au VimEnter * ++once lua require("packer.load")({'vim-highlighturl', 'neoscroll.nvim', 'bufferline.nvim'}, { event = "VimEnter *" }, _G.packer_plugins)]]
-vim.cmd [[au BufRead * ++once lua require("packer.load")({'indent-blankline.nvim', 'nvim-colorizer.lua'}, { event = "BufRead *" }, _G.packer_plugins)]]
 vim.cmd [[au BufWinEnter * ++once lua require("packer.load")({'which-key.nvim', 'nvim-treesitter'}, { event = "BufWinEnter *" }, _G.packer_plugins)]]
+vim.cmd [[au BufRead * ++once lua require("packer.load")({'nvim-colorizer.lua', 'indent-blankline.nvim'}, { event = "BufRead *" }, _G.packer_plugins)]]
 time([[Defining lazy-load event autocommands]], false)
 vim.cmd("augroup END")
 

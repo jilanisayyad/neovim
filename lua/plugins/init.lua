@@ -37,7 +37,6 @@ return require("packer").startup(function(use)
 	use({ "theHamsta/nvim-dap-virtual-text", config = "require('dap-virtual-text-config')" })
 	use({ "leoluz/nvim-dap-go", config = "require('dap-go-config')" })
 	use({ "mfussenegger/nvim-dap-python", config = "require('dap-python-config')" })
-	use({ "HUAHUAI23/telescope-dapzzzz" })
 	-- CodeRunner
 	use({ "CRAG666/code_runner.nvim", config = "require('code-runner-config')" })
 
@@ -76,6 +75,9 @@ return require("packer").startup(function(use)
 	use({
 		"lukas-reineke/indent-blankline.nvim",
 		config = "require('blankline-config')",
+		requires = {
+			"TheGLander/indent-rainbowline.nvim",
+		},
 		event = "BufRead",
 	})
 
@@ -88,7 +90,6 @@ return require("packer").startup(function(use)
 	-- Fzf
 	use({
 		"nvim-telescope/telescope.nvim",
-		requires = { { "nvim-lua/plenary.nvim" } },
 		cmd = "Telescope",
 		config = "require('telescope-config')",
 	})
@@ -143,19 +144,24 @@ return require("packer").startup(function(use)
 		requires = "nvim-tree/nvim-web-devicons",
 		config = "require('bufferline-config')",
 	})
-	use({ "noib3/nvim-cokeline", config = "require('cokeline-config')" })
-
 	use({ "nvim-tree/nvim-web-devicons", config = "require('devicons-config')" })
 	-- winbar plugin
 	use({ "fgheng/winbar.nvim", config = "require('winbar-config')" })
+	use({
+		"utilyre/barbecue.nvim",
+		tag = "*",
+		requires = {
+			"SmiteshP/nvim-navic",
+			"nvim-tree/nvim-web-devicons", -- optional dependency
+		},
+		config = "require('barbecue-config')",
+	})
 	-- impatient
 	use({ "lewis6991/impatient.nvim", config = "require('impatient-config')" })
 	-- startup-time
 	use("dstein64/vim-startuptime")
 	-- notifications
 	use({ "j-hui/fidget.nvim", config = "require('fidget-config')" })
-	-- folding
-	use({ "kevinhwang91/nvim-ufo", requires = "kevinhwang91/promise-async", config = "require('ufo-config')" })
 	-- nvim notify
 	use({ "rcarriga/nvim-notify" })
 	-- neodev
@@ -175,4 +181,10 @@ return require("packer").startup(function(use)
 	-- image wsl
 	use({ "HakonHarnes/img-clip.nvim", config = "require('img-clip-config')" })
 	use({ "akinsho/toggleterm.nvim", config = "require('toggleterm-config')" })
+	use({
+		"willothy/nvim-cokeline",
+		requires = { { "kyazdani42/nvim-web-devicons" }, { "stevearc/resession.nvim" } },
+		config = "require('cokeline-config')",
+	})
+	use({ "kevinhwang91/nvim-ufo", requires = "kevinhwang91/promise-async", config = "require('ufo-config')" })
 end)

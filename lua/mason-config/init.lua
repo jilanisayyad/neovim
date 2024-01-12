@@ -92,6 +92,23 @@ require("lspconfig").ansiblels.setup({
 
 require("lspconfig").pyright.setup({
 	capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities()),
+	settings = {
+		python = {
+			analysis = {
+				autoSearchPaths = true,
+				diagnosticMode = "workspace",
+				typeCheckingMode = "off",
+				useLibraryCodeForTypes = true,
+			},
+			pyright = {
+				disableLanguageServices = true,
+				disableOrganizeImports = true,
+				reportMissingModuleSource = "none",
+				reportMissingImports = "none",
+				reportUndefinedVariable = "none",
+			},
+		},
+	},
 })
 
 require("lspconfig").gopls.setup({
@@ -132,5 +149,9 @@ require("lspconfig").bashls.setup({
 })
 
 require("lspconfig").marksman.setup({
+	capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities()),
+})
+
+require("lspconfig").tsserver.setup({
 	capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities()),
 })

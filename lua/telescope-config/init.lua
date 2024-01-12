@@ -85,12 +85,3 @@ require("telescope").setup({
 require("telescope").load_extension("luasnip")
 require("telescope").load_extension("http")
 require("telescope").load_extension("bookmarks")
-require("telescope").load_extension("i23")
-
-function foo()
-	local schema = require("yaml-companion").get_buf_schema(0)
-	if schema then
-		return schema.result[1].name
-	end
-	return ""
-end
