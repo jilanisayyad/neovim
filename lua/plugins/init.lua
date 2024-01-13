@@ -2,7 +2,7 @@ return require("packer").startup(function(use)
 	-- Packer
 	use("wbthomason/packer.nvim")
 	-- Colorscheme
-	use({ "ellisonleao/gruvbox.nvim", config = "require('theme-config')" })
+	use({ "xiantang/darcula-dark.nvim", config = "require('theme-config')" })
 	-- Autocomplete
 	use({ "nvim-lua/plenary.nvim" })
 	use({ "hrsh7th/cmp-nvim-lsp" })
