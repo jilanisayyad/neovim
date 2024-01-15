@@ -78,7 +78,7 @@ return require("packer").startup(function(use)
 		requires = {
 			"TheGLander/indent-rainbowline.nvim",
 		},
-		event = "BufRead",
+		event = { "BufNewFile", "BufRead", "InsertEnter" },
 	})
 
 	-- Buffer and statusline
