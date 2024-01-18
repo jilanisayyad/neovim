@@ -53,7 +53,7 @@ local mappings = {
 		pn = { "<cmd><cmd>lua require('neotest').jump.next({ status ='passed' })<cr>", "Next Passed" },
 		w = { "<cmd>lua require('neotest').watch.toggle(vim.fn.expand('%'))<cr>", "Watch Test" },
 	},
-	k = {
+	z = {
 		name = "folding",
 		o = { ":foldopen<cr>", "Open All" },
 		c = { ":foldclose<cr>", "Close All" },

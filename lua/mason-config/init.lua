@@ -139,6 +139,13 @@ require("lspconfig").yamlls.setup({
 					"repli*",
 					"servi*.yaml",
 				},
+				["https://raw.githubusercontent.com/argoproj/argo-workflows/master/api/jsonschema/schema.json"] = {
+					"argo*.yaml",
+					"*argo*.yaml",
+				},
+				["https://raw.githubusercontent.com/argoproj/argo-events/master/api/jsonschema/schema.json"] = {
+					"*events*.yaml",
+				},
 			},
 		},
 	},
