@@ -2,7 +2,6 @@ return require("packer").startup(function(use)
 	-- Packer
 	use("wbthomason/packer.nvim")
 	-- Colorscheme
-	use({ "navarasu/onedark.nvim", config = "require('theme-config')" })
 	use({ "loctvl842/monokai-pro.nvim", config = "require('theme-config')" })
 	-- Autocomplete
 	use({ "nvim-lua/plenary.nvim" })
