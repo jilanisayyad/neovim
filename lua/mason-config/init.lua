@@ -181,6 +181,8 @@ require("lspconfig").yamlls.setup({
 					"*cluster-workflow-template*.yaml",
 					"*workflow-template*.yaml",
 					"*argo*.yaml",
+					"*deploy*.yaml",
+					"*values*.yaml",
 				},
 				["https://json.schemastore.org/yamllint.json"] = {
 					"*.yml",
