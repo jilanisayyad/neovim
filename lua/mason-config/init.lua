@@ -14,7 +14,6 @@ require("mason").setup({
 	automatic_servers_installation = true,
 })
 
-local nvim_lsp = require("lspconfig")
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
@@ -133,18 +132,59 @@ require("lspconfig").yamlls.setup({
 			},
 			schemas = {
 				["https://raw.githubusercontent.com/yannh/kubernetes-json-schema/master/v1.22.1-standalone/all.json"] = {
-					"depl*.yaml",
-					"po*.yaml",
-					"daemo*.yaml",
-					"repli*",
-					"servi*.yaml",
+					"*depl*.yaml",
+					"*po*.yaml",
+					"*daemo*.yaml",
+					"*repli*.yaml",
+					"*servi*.yaml",
+					"*secret*.yaml",
+					"*service-account*.yaml",
+					"*role*.yaml",
+					"*role-binding*.yaml",
+					"*config-map*.yaml",
+					"*job*.yaml",
+					"*cronjob*.yaml",
+					"*ingress*.yaml",
+					"*network-policy*.yaml",
+					"*persistent-volume*.yaml",
+					"*persistent-volume-claim*.yaml",
+					"*storage-class*.yaml",
+					"*volume*.yaml",
+					"*namespace*.yaml",
+					"*limit-range*.yaml",
+					"*resource-quota*.yaml",
+					"*priority-class*.yaml",
+					"*pod-template*.yaml",
 				},
-				["https://raw.githubusercontent.com/argoproj/argo-workflows/master/api/jsonschema/schema.json"] = {
-					"argo*.yaml",
-					"*argo*.yaml",
+				["https://json.schemastore.org/chart.json"] = {
+					"Chart.yaml",
+				},
+				["https://json.schemastore.org/kustomization.json"] = {
+					"kustomization.yaml",
+				},
+				["https://json.schemastore.org/github-workflow.json"] = {
+					".github/workflows/*.yml",
+				},
+				["https://json.schemastore.org/github-action.json"] = {
+					"*github-action*.yaml",
+				},
+				["https://raw.githubusercontent.com/microsoft/azure-pipelines-vscode/master/service-schema.json"] = {
+					"azure-pipelines.yaml",
 				},
 				["https://raw.githubusercontent.com/argoproj/argo-events/master/api/jsonschema/schema.json"] = {
 					"*events*.yaml",
+				},
+				["https://raw.githubusercontent.com/argoproj/argo-workflows/master/api/jsonschema/schema.json"] = {
+					"*workflow*.yaml",
+					"*clustertemplate*.yaml",
+					"*cronworkflow*.yaml",
+					"*cluster-workflow-template*.yaml",
+					"*workflow-template*.yaml",
+					"*argo*.yaml",
+				},
+				["https://json.schemastore.org/yamllint.json"] = {
+					"*.yml",
+					"*.yaml",
 				},
 			},
 		},

@@ -2,7 +2,7 @@ return require("packer").startup(function(use)
 	-- Packer
 	use("wbthomason/packer.nvim")
 	-- Colorscheme
-	use({ "sainnhe/gruvbox-material", config = "require('theme-config')" })
+	use({ "navarasu/onedark.nvim", config = "require('theme-config')" })
 	-- Autocomplete
 	use({ "nvim-lua/plenary.nvim" })
 	use({ "hrsh7th/cmp-nvim-lsp" })
@@ -98,11 +98,6 @@ return require("packer").startup(function(use)
 	use({
 		"benfowler/telescope-luasnip.nvim",
 		module = "telescope._extensions.luasnip", -- if you wish to lazy-load
-	})
-	use({ "barrett-ruth/telescope-http.nvim" })
-	use({
-		"dhruvmanila/telescope-bookmarks.nvim",
-		tag = "*",
 	})
 	-- Git
 	use("f-person/git-blame.nvim")

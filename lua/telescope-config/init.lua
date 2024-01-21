@@ -83,5 +83,3 @@ require("telescope").setup({
 -- Telescope extensions
 
 require("telescope").load_extension("luasnip")
-require("telescope").load_extension("http")
-require("telescope").load_extension("bookmarks")
